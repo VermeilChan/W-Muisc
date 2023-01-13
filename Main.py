@@ -1,10 +1,15 @@
-from pytube import YouTube
+import youtube_dl
 
-# URL of the video you want to download
-url = "https://www.youtube.com/watch?v=XXXXXXXXXXX"
+ydl_opts = {
+    'format': 'bestaudio/best',
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    }],
+    'outtmpl':'%(title)s.%(ext)s',
+    'quiet': True
+}
 
-# Create a YouTube object
-yt = YouTube(url)
-
-# Download the video
-yt.streams.first().download()
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download(['https://www.youtube.com/watch?v=XXXXXXXXXXX'])
