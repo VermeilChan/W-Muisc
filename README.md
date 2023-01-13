@@ -12,4 +12,7 @@ Setup 5 : Run & Wait
 
 Setup 6 : Download :)
 
-I'm Still Trying To Optimize This Code :)
+
+------------------------------------------
+My Discord : Vermeil#5864
+
