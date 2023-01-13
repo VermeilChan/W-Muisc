@@ -1,5 +1,5 @@
-$ pip install pytube
-$ pip install numpy
-$ pip install replit
-$ pip install Flask
-$ python -m pip install urllib3
+pip install replit
+pip install Flask
+pip install urllib3
+pip install youtube_dl
+pip install numpy
