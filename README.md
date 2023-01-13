@@ -2,7 +2,7 @@ WARNING : Please note that downloading videos from youtube is against their term
 -----------------------------------------------------------------------------------------------------------------------------------
 Setup 1 : Go to [replit.com](https://replit.com/~)
 
-Setup 2 : Create A Py Project
+Setup 2 : Create A py Project
 
 Setup 3 : Copy And Paste
 
