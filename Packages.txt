@@ -1,7 +1,5 @@
-python -m pip install --upgrade pip
-pip install urllib3
-pip install replit
-pip install Flask
-pip install youtube_dl
-pip install django-ffmpeg
-pip install numpy
+In order to run this code, you will need to have the following requirements installed:
+
+-Python 3
+-youtube_dl python library
+-tkinter python library
