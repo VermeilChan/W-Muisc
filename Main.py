@@ -1,36 +1,19 @@
 import youtube_dl
-import tkinter as tk
-from tkinter import messagebox
+import os
 
-def start_download():
-    url = url_entry.get()
-    ydl_opts = {
-        'format': 'bestaudio/mp3',
-        'outtmpl':'%(title)s.%(ext)s',
-        'dns-servers': '8.8.8.8 8.8.4.4',
-    }
+ydl_opts = {
+    'format': 'bestaudio/mp3',
+    'outtmpl':'%(title)s.%(ext)s',
+}
+
+def download_video(url:str)->None:
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             ydl.download([url])
-        messagebox.showinfo("Download complete!", "Your video has been downloaded successfully!")
-        status_label.config(text='Download complete!')
+        print("Download complete!")
     except Exception as e:
-        messagebox.showerror("Error Occurred", f"An error occured: {e}")
-        status_label.config(text=f'An error occured: {e}')
+        print(f"An error occurred: {e}")
 
-root = tk.Tk()
-root.title("YouTube Downloader")
-
-url_label = tk.Label(root, text="Enter YouTube URL:")
-url_label.grid(row=0, column=0, padx=10, pady=10)
-
-url_entry = tk.Entry(root)
-url_entry.grid(row=0, column=1, padx=10, pady=10)
-
-download_button = tk.Button(root, text="Download", command=start_download)
-download_button.grid(row=1, column=0, columnspan=2, pady=10)
-
-status_label = tk.Label(root, text="")
-status_label.grid(row=2, column=0, columnspan=2, pady=10)
-
-root.mainloop()
+if __name__ == "__main__":
+    url = input("Enter YouTube URL:")
+    download_video(url)
