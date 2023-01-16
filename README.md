@@ -1,13 +1,20 @@
-#WARNING : Please note that downloading videos from youtube is against their terms of service and it is illegal in many countries.
+# YouTube Audio Downloader
+A simple script to download audio from YouTube videos using the youtube-dl library.
 
-Setup 1 : Go to [replit.com](https://replit.com/~)
+## Requirements
+- Python 3.x
+- youtube-dl library
 
-Setup 2 : Create A Python Project
+## Installation
+1. Install python3
+2. Install youtube_dl library by running `pip install youtube_dl` in your terminal
+3. Clone or download the repository
 
-Setup 3 : Copy And Paste
+## Usage
+1. Run the script using `python main.py`
+2. Enter the YouTube video URL when prompted
+3. The audio will be saved in the same directory as the script with the title of the video as the file name
 
-Setup 4 : Install The Requirements Packages You Can Find Them In Here :) Requirements.txt
-
-Setup 5 : Run & Wait A Bit
-
-Setup 6 : And Download :)
+## Note
+- This script only downloads audio in mp3 format
+- Make sure you have the necessary permissions to download the video.
