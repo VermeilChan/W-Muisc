@@ -1,17 +1,21 @@
 import youtube_dl
 import tkinter as tk
+from tkinter import messagebox
 
 def start_download():
     url = url_entry.get()
     ydl_opts = {
         'format': 'bestaudio/mp3',
         'outtmpl':'%(title)s.%(ext)s',
+        'dns-servers': '8.8.8.8 8.8.4.4',
     }
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             ydl.download([url])
+        messagebox.showinfo("Download complete!", "Your video has been downloaded successfully!")
         status_label.config(text='Download complete!')
     except Exception as e:
+        messagebox.showerror("Error Occurred", f"An error occured: {e}")
         status_label.config(text=f'An error occured: {e}')
 
 root = tk.Tk()
