@@ -16,7 +16,9 @@ In order to run this code, you will need the following requirements:
 
 Python 3.x installed on your system (this code was tested with Python 3.11)
 The youtube_dl library, which can be installed using pip by running pip install youtube_dl
-The tkinter library, which is included with Python and does not need to be installed separately.WARNING : Please note that downloading videos from youtube is against their terms of service and it is illegal in many countries.
+The tkinter library, which is included with Python and does not need to be installed separately.
+
+WARNING : Please note that downloading videos from youtube is against their terms of service and it is illegal in many countries.
 -----------------------------------------------------------------------------------------------------------------------------------
 Setup 1 : Go to [replit.com](https://replit.com/~)
 
